@@ -28,3 +28,7 @@
 16  镜像的导入导出  
       docker save ubuntu:latest > ubuntu_save.tar    //保存镜像到一个tar包  
        docker load < ubuntu_save.tar      //加载一个tar包格式的镜像(之后的镜像信息都在，包括名字)  
+       
+ 
+ 16 当写Dockerfile的时候 尽量命令不要写在一起否则上传到 远程docker上会很慢 一个命令一层镜像  
+ 17 docker push  多送到远程docker 服务器的时候 因为网络会很慢，需要不间断切换网络提交数据       
