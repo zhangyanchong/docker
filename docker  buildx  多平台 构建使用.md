@@ -25,14 +25,14 @@
       
       使用命令
       
-      sudo docker buildx build   --platform linux/amd64 -f ./Dockerfile -t fengdejiyi/php74:v1 --  output=type=tar,dest=linux_new.tar .   
-      	•	sudo: 以超级用户权限运行命令。Docker 通常需要 root 权限，尤其在 Linux 上。  
-    	•	docker buildx build: 使用 buildx 命令构建镜像。buildx 是 Docker 的扩展工具，支持跨平台构建、多架构镜像生成等功能。   
-    	•	--platform linux/amd64: 指定镜像要构建的目标平台。在这里选择了 linux/amd64，也就是 Linux 系统的 x86-64 架构。   
-    	•	-f ./Dockerfile: 指定 Dockerfile 文件路径，这里指定了 ./  Dockerfile，即当前目录下的 Dockerfile。  
-    	•	-t fengdejiyi/php74:v1: 给镜像设置一个标签（tag），以便标识和管理。这里的标签是 fengdejiyi/php74:v1。  
-    	•	--output=type=tar,dest=linux_new.tar: 指定输出类型和目标位置。type=tar 将镜像导出为 .tar 文件，而 dest=linux_new.tar 指定导出文件名为 linux_new.tar。  
-    	•	.: 表示 Docker 构建的上下文路径为当前目录。  
+    sudo docker buildx build   --platform linux/amd64 -f ./Dockerfile -t fengdejiyi/php74:v1 --  output=type=tar,dest=linux_new.tar .   
+       sudo: 以超级用户权限运行命令。Docker 通常需要 root 权限，尤其在 Linux 上。  
+    	docker buildx build: 使用 buildx 命令构建镜像。buildx 是 Docker 的扩展工具，支持跨平台构建、多架构镜像生成等功能。   
+    	--platform linux/amd64: 指定镜像要构建的目标平台。在这里选择了 linux/amd64，也就是 Linux 系统的 x86-64 架构。   
+    	-f ./Dockerfile: 指定 Dockerfile 文件路径，这里指定了 ./  Dockerfile，即当前目录下的 Dockerfile。  
+    	-t fengdejiyi/php74:v1: 给镜像设置一个标签（tag），以便标识和管理。这里的标签是 fengdejiyi/php74:v1。  
+    	--output=type=tar,dest=linux_new.tar: 指定输出类型和目标位置。type=tar 将镜像导出为 .tar 文件，而 dest=linux_new.tar 指定导出文件名为 linux_new.tar。  
+    	.: 表示 Docker 构建的上下文路径为当前目录。  
 	
     	生成的tar 即为镜像
     	使用常规导入
