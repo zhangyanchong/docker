@@ -40,8 +40,26 @@
     	cat linux.tar  |docker import - fengdejiyi/php74:hks
     	
     	成功之后  docker images 查看
+    	
+  ----------------------------------------
+    推动到远程 
+    docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t fengdejiyi/php74:v1 --push .    
+    docker buildx build：使用 Docker Buildx 工具来构建镜像。Buildx 是 Docker 提供的一个多平台构建工具，可以生成支持不同 CPU 架构的镜像。
+   	--platform linux/amd64,linux/arm64,linux/arm/v7：指定构建的目标平台。这里指定了三种平台：
+    linux/amd64：适用于大多数 x86_64 架构的服务器和电脑。
+    linux/arm64：适用于 ARM64 架构，如苹果 M1/M2 芯片和部分服务器。
+    linux/arm/v7：适用于 ARMv7 架构的设备，如某些树莓派（Raspberry Pi）型号。
+	-t fengdejiyi/php74:v1：为生成的镜像指定标签，其中：
+	fengdejiyi/php74 是镜像名称。
+    v1 是标签，通常用于区分版本或环境。
+    --push：构建完成后将镜像推送到 Docker Hub 或其他镜像仓库。
+    .：指定构建上下文为当前目录（即当前目录的 Dockerfile 会被用于构建镜像）。  	
       
   
+  
+  如果遇到翻墙问题 建议用  
+     模式选择 规则模式 +tun模式   不需要系统代理
+    
   
   
 
