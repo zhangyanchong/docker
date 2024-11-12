@@ -14,3 +14,7 @@ i.networks 指令用来指定启动容器使用网桥 相当于 docker run --net
 j.ports  指令用来指定宿主机和容器端口映射 相当于 docker run -p  
 k.volumes 指令用来指定宿主机中容器目录目录映射docker run一v  
 l.restart  指令 用来指定docker容器(服务)总是运行--restart=always docker run
+
+
+
+docker-compose  和 docker compose 一个新版本一个是老版本的命令
